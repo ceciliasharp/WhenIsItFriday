@@ -1,0 +1,32 @@
+﻿@using WhenIsItFriday.Localization
+@using System.Web.UI.WebControls
+@{
+    ViewBag.Title = "Techdays demo";
+}
+
+<div class="jumbotron">
+    <h1>@Resource.IsItFriday</h1>
+        <ul class="list-inline">
+            <li>@Html.ActionLink("SV", "Index", "Home", new { culture = "sv-SE" }, null)</li>
+            <li>@Html.ActionLink("EN", "Index", "Home", new { culture = "en-GB" }, null)</li>
+            <li>@Html.ActionLink("GR", "Index", "Home", new { culture = "el-GR" }, null)</li>
+            <li>@Html.ActionLink("?", "Index", "Home", new { culture = "qps-ploc" }, null)</li>
+        </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Resource.Today</h2>
+        <p>@ViewBag.FridayToday</p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Resource.Tomorrow</h2>
+        <p>@ViewBag.FridayTomorrow</p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Resource.AnyDay</h2>
+        <p>@ViewBag.FridayAnyDay</p>
+    </div>
+</div>
+
+
